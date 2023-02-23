@@ -1,0 +1,38 @@
+/home/Sahana.Narayan.23/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:238: RuntimeWarning: Glyph 53076 missing from current font.
+  font.set_text(s, 0.0, flags=flags)
+/home/Sahana.Narayan.23/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:238: RuntimeWarning: Glyph 47196 missing from current font.
+  font.set_text(s, 0.0, flags=flags)
+/home/Sahana.Narayan.23/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:238: RuntimeWarning: Glyph 45208 missing from current font.
+  font.set_text(s, 0.0, flags=flags)
+/home/Sahana.Narayan.23/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:238: RuntimeWarning: Glyph 48148 missing from current font.
+  font.set_text(s, 0.0, flags=flags)
+/home/Sahana.Narayan.23/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:238: RuntimeWarning: Glyph 51060 missing from current font.
+  font.set_text(s, 0.0, flags=flags)
+/home/Sahana.Narayan.23/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:238: RuntimeWarning: Glyph 47084 missing from current font.
+  font.set_text(s, 0.0, flags=flags)
+/home/Sahana.Narayan.23/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:238: RuntimeWarning: Glyph 49828 missing from current font.
+  font.set_text(s, 0.0, flags=flags)
+/home/Sahana.Narayan.23/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:201: RuntimeWarning: Glyph 53076 missing from current font.
+  font.set_text(s, 0, flags=flags)
+/home/Sahana.Narayan.23/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:201: RuntimeWarning: Glyph 47196 missing from current font.
+  font.set_text(s, 0, flags=flags)
+/home/Sahana.Narayan.23/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:201: RuntimeWarning: Glyph 45208 missing from current font.
+  font.set_text(s, 0, flags=flags)
+/home/Sahana.Narayan.23/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:201: RuntimeWarning: Glyph 48148 missing from current font.
+  font.set_text(s, 0, flags=flags)
+/home/Sahana.Narayan.23/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:201: RuntimeWarning: Glyph 51060 missing from current font.
+  font.set_text(s, 0, flags=flags)
+/home/Sahana.Narayan.23/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:201: RuntimeWarning: Glyph 47084 missing from current font.
+  font.set_text(s, 0, flags=flags)
+/home/Sahana.Narayan.23/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:201: RuntimeWarning: Glyph 49828 missing from current font.
+  font.set_text(s, 0, flags=flags)
+ko : 288
+en : 15
+und : 10
+in : 5
+ja : 2
+tr : 1
+tl : 1
+fi : 1
+es : 1
+output_path_base for plot is  plots/reduced.lang.#코로나바이러스
