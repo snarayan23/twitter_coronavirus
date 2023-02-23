@@ -48,13 +48,13 @@ plt.bar(key, val)
 #if reduce.lang 
 if args.input_path == "reduced.lang":
     plt.xlabel("Language")
-    plt.xlabel("Count")
+    plt.ylabel("Count")
     plt.title("Number of " + args.key + " tweets across Languages")
 
 #if reduce.country 
 if args.input_path == "reduced.country":
     plt.xlabel("Country")
-    plt.xlabel("Count")
+    plt.ylabel("Count")
     plt.title("Number of " + args.key + " tweets in Countries")
 
 
