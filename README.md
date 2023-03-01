@@ -3,7 +3,7 @@
 You will scan all geotagged tweets sent in 2020 to monitor for the spread of the coronavirus on social media.
 
 **Due date:** 
-Sunday, 11 April.
+March 7th, 2023
 
 This homework will require LOTs of computation time.
 I recommend that you have your code working by **21 Mar** to ensure that you will have enough time to execute the code.
@@ -71,7 +71,24 @@ Merge sort over MapReduce is the classic example.
 Here, mapping is equivalent to sorting and so takes time O(n log n),
 and reducing is a call to the `_reduce` function that takes time O(n).
 But they are both rare in practice and require careful math to describe,
-so we will ignore them.
+so we will ignore them. '#코로나바이러스',  # korean
+    '#コロナウイルス',  # japanese
+    '#冠状病毒',        # chinese
+    '#covid2019',
+    '#covid-2019',
+    '#covid19',
+    '#covid-19',
+    '#coronavirus',
+    '#corona',
+    '#virus',
+    '#flu',
+    '#sick',
+    '#cough',
+    '#sneeze',
+    '#hospital',
+    '#nurse',
+    '#doctor',
+
 In the merge sort example, it requires p=n processors just to reduce the runtime down to O(n)...
 that's a lot of additional computing power for very little gain,
 and so is impractical.
@@ -132,43 +149,66 @@ Complete the following tasks to familiarize yourself with the sample code:
 
 Complete the following tasks:
 
-1. Modify the `map.py` file so that it tracks the usage of the hashtags on both a language and country level.
-   This will require creating a variable `counter_country` similar to the variable `counter_lang`, 
-   and modifying this variable in the `#search hashtags` section of the code appropriately.
-   The output of running `map.py` should be two files now, one that ends in `.lang` for the lanuage dictionary (same as before),
-   and one that ends in `.country` for the country dictionary.
 
-   **HINT:**
-   Most tweets contain a `place` key,
-   which contains a dictionary with the `country_code` key.
-   This is how you should lookup the country that a tweet was sent from.
-   Some tweets, however, do not have a `country_code` key.
-   This can happen, for example, if the tweet was sent from international waters or the [international space station](https://unistellaroptics.com/10-years-ago-today-the-first-tweet-was-sent-directly-from-space/).
-   Your code will have to be generic enough to handle edge cases similar to this without failing.
+Task 1: Map
 
-1. Once your `map.py` file has been modified to track results for each country,
-   you should run the map file on all the tweets in the `/data-fast/twitter\ 2020` folder.
-   In order to do this, you should create a shell script `run_maps.sh` that loops over each file in the dataset and runs `map.py` on that file.
-   Each call to `map.py` can take between minutes to hours to finish.
-   (The exact runtime will depend on the server's load due to other students.)
-   So you should use the `nohup` command to ensure the program continues to run after you disconnect and the `&` operator to ensure that all `map.py` commands run in parallel.
+Modify the map.py file so that it tracks the usage of the hashtags on both a language and country level. This will require creating a variable counter_country similar to the variable counter_lang, and modifying this variable in the #search hashtags section of the code appropriately. The output of running map.py should be two files now, one that ends in .lang for the language dictionary (same as before), and one that ends in .country for the country dictionary.
 
-1. After your modified `map.py` has run on all the files,
-   you should have a large number of files in your `outputs` folder.
-   Use the `reduce.py` file to combine all of the `.lang` files into a single file,
-   and all of the `.country` files into a different file.
-   Then use the `visualize.py` file to count the total number of occurrences of each of the hashtags.
+HINT: Most tweets contain a place key, which contains a dictionary with the country_code key. This is how you should lookup the country that a tweet was sent from. Some tweets, however, do not have a country_code key. This can happen, for example, if the tweet was sent from international waters or the international space station. Your code will have to be generic enough to handle edge cases similar to this without failing.
 
-   For each hashtag, you should create an output file in your repo using output redirection
-   ```
-   $ ./src/visualize.py --input_path=PATH --key=HASHTAG | head > viz/HASHTAG
-   ```
-   but replace `PATH` with the path to the output of your `reduce.py` file and `HASHTAG` is replaced with the hashtag you are analyzing.
+Task 2: Reduce
 
-1. Commit all of your code and visualization output files to your github repo and push the results to github.
-    You must edit the `README.md` file to provide a brief explanation of your results.
-    This explanation should be suitable for a future employer to look at while they are interviewing you to get a rough idea of what you accomplished.
-    (And you should tell them about this in your interviews!)
+Once your map.py file has been modified to track results for each country, you should run the map file on all the tweets in the /data/Twitter\ dataset folder from 2020.
+
+HINT: Use the glob * to select only the tweets from 2020 and not all tweets.
+
+You should create a shell script run_maps.sh that loops over each file in the dataset and runs map.py on that file. Each call to map.py can take up to a day to finish, so you should use the nohup command to ensure the program continues to run after you disconnect and the & operator to ensure that all map.py commands run in parallel.
+
+After your modified map.py has run on all the files, you should have a large number of files in your outputs folder. Use the reduce.py file to combine all of the .lang files into a single file, and all of the .country files into a different file.
+
+Task 3: reduce
+
+Recall that you can visualize your output files with the command
+
+$ ./src/visualize.py --input_path=PATH --key=HASHTAG
+Currently, this prints the top keys to stdout.
+
+Modify the visualize.py file so that it generates a bar graph of the results and stores the bar graph as a png file. The horizontal axis of the graph should be the keys of the input file, and the vertical axis of the graph should be the values of the input file. The final results should be sorted from low to high, and you only need to include the top 10 keys.
+
+HINT: We are not covering how to create images from python code in this class. I recommend you use the matplotlib library, and you can find some samples to base your code off of in the documentation here.
+
+Then, run the visualize.py file with the --input_path equal to both the country and lang files created in the reduce phase, and the --key set to #coronavirus and #코로나바이러스. This should generate four plots in total.
+
+Task 4: uploading
+
+Commit all of your code and images output files to your github repo and push the results to github. You must edit the README.md file to provide a brief explanation of your results and include the 4 generate png files. This explanation should be suitable for a future employer to look at while they are interviewing you to get a rough idea of what you accomplished. (And you should tell them about this in your interviews!)
+
+
+**Results:** 
+In this project, I used a dataset that had geotagged tweets in 2020 in order to understand how users used coronavirus related hashtags on twitter across different countries and languages. The plots folder shows the usage of different coronavirus related hashtags in various countries and languages. The plots folder shows the visualizations for all of the following hashtags: 
+ '#코로나바이러스',  '#コロナウイルス', '#冠状病毒', '#covid2019', '#covid-2019', '#covid19', '#covid-19', '#coronavirus', '#corona', '#virus', '#flu', '#sick', '#cough', '#sneeze', '#hospital', 
+ '#nurse', '#doctor'
+
+ I automated these graphs using a `run_visualize.sh` shell script that creates two bar graphs for each hashtag. One bar graph shows the usage of the hashtag in the top 10 countries it was used in while the other shows the usage of the hashtag in the top 10 languages it was used in. In the plots folder, the `reduced.country."hashtag".png` shows the usage of the hashtag in different countries while `reduced.lang."hashtag".png shows the usage of the hashtag in different languages. 
+
+ The following two graphs show the usage of `#coronavirus` in the top 10 countries and languages it was used in. 
+
+ <img src=plots/reduced.country.#coronavirus.png width=100% />
+ 
+ The bar graph shows that `#coronavirus` was used most in the US followed by India and Great Britain. We can also see that comparatively, Turkey and France had a much lower usage of `#coronavirus. 
+
+<img src=plots/reduced.lang.#coronavirus.png width=100% />
+
+ The bar graph shows that `#coronavirus` was tweeted most in English and Spanish. 
+
+ <img src=plots/reduced.country.#코로나바이러스.png width=100% />
+
+ The bar graph shows that `#코로나바이러스` was used most in Korea which makes sense since the hashtag is in Korean. 
+
+ <img src=plots/reduced.lang.#코로나바이러스.png width=100% />
+
+ The bar graph shows that the hashtag `#코로나바이러스` was mostly used in Korean. 
+
 
 ## Submission
 
