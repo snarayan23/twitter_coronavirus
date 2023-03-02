@@ -168,7 +168,7 @@ Then, run the visualize.py file with the --input_path equal to both the country 
 Commit all of your code and images output files to your github repo and push the results to github. You must edit the README.md file to provide a brief explanation of your results and include the 4 generate png files. This explanation should be suitable for a future employer to look at while they are interviewing you to get a rough idea of what you accomplished. (And you should tell them about this in your interviews!)
 
 
-##Results:
+## Results:
  
 In this project, I used a dataset that had geotagged tweets in 2020 in order to understand how users used coronavirus related hashtags on twitter across different countries and languages. The plots folder shows the usage of different coronavirus related hashtags in various countries and languages. The plots folder shows the visualizations for all of the following hashtags: 
  '#코로나바이러스',  '#コロナウイルス', '#冠状病毒', '#covid2019', '#covid-2019', '#covid19', '#covid-19', '#coronavirus', '#corona', '#virus', '#flu', '#sick', '#cough', '#sneeze', '#hospital', 
