@@ -153,9 +153,9 @@ Complete the following tasks:
 **Task 1: Map**
 
 Modify the map.py file so that it tracks the usage of the hashtags on both a language and country level. This will require creating a variable counter_country similar to the variable counter_lang, and modifying this variable in the #search hashtags section of the code appropriately. The output of running map.py should be two files now, one that ends in .lang for the language dictionary (same as before), and one that ends in .country for the country dictionary.
-
+```
 HINT: Most tweets contain a place key, which contains a dictionary with the country_code key. This is how you should lookup the country that a tweet was sent from. Some tweets, however, do not have a country_code key. This can happen, for example, if the tweet was sent from international waters or the international space station. Your code will have to be generic enough to handle edge cases similar to this without failing.
-
+```
 **Task 2: Reduce**
 
 Once your map.py file has been modified to track results for each country, you should run the map file on all the tweets in the /data/Twitter\ dataset folder from 2020.
@@ -170,7 +170,9 @@ After your modified map.py has run on all the files, you should have a large num
 
 Recall that you can visualize your output files with the command
 
+```
 $ ./src/visualize.py --input_path=PATH --key=HASHTAG
+```
 Currently, this prints the top keys to stdout.
 
 Modify the visualize.py file so that it generates a bar graph of the results and stores the bar graph as a png file. The horizontal axis of the graph should be the keys of the input file, and the vertical axis of the graph should be the values of the input file. The final results should be sorted from low to high, and you only need to include the top 10 keys.
@@ -184,13 +186,14 @@ Then, run the visualize.py file with the --input_path equal to both the country 
 Commit all of your code and images output files to your github repo and push the results to github. You must edit the README.md file to provide a brief explanation of your results and include the 4 generate png files. This explanation should be suitable for a future employer to look at while they are interviewing you to get a rough idea of what you accomplished. (And you should tell them about this in your interviews!)
 
 
-**Results:** 
+##Results:
+ 
 In this project, I used a dataset that had geotagged tweets in 2020 in order to understand how users used coronavirus related hashtags on twitter across different countries and languages. The plots folder shows the usage of different coronavirus related hashtags in various countries and languages. The plots folder shows the visualizations for all of the following hashtags: 
  '#코로나바이러스',  '#コロナウイルス', '#冠状病毒', '#covid2019', '#covid-2019', '#covid19', '#covid-19', '#coronavirus', '#corona', '#virus', '#flu', '#sick', '#cough', '#sneeze', '#hospital', 
  '#nurse', '#doctor'
 
- I automated these graphs using a `run_visualize.sh` shell script that creates two bar graphs for each hashtag. One bar graph shows the usage of the hashtag in the top 10 countries it was used in while the other shows the usage of the hashtag in the top 10 languages it was used in. In the plots folder, the `reduced.country."hashtag".png` shows the usage of the hashtag in different countries while `reduced.lang."hashtag".png shows the usage of the hashtag in different languages. 
-
+ I automated these graphs using a `run_visualize.sh` shell script that creates two bar graphs for each hashtag. One bar graph shows the usage of the hashtag in the top 10 countries it was used in while the other shows the usage of the hashtag in the top 10 languages it was used in. In the plots folder, the `reduced.country."$hashtag".png` shows the usage of the hashtag in different countries while `reduced.lang."$hashtag".png` shows the usage of the hashtag in different languages. 
+ 
  The following two graphs show the usage of `#coronavirus` in the top 10 countries and languages it was used in. 
 
 ![Country #coronavirus](https://github.com/snarayan23/twitter_coronavirus/blob/master/plots/reduced.country.%23coronavirus.png)
