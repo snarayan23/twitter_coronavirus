@@ -153,14 +153,14 @@ Complete the following tasks:
 **Task 1: Map**
 
 Modify the map.py file so that it tracks the usage of the hashtags on both a language and country level. This will require creating a variable counter_country similar to the variable counter_lang, and modifying this variable in the #search hashtags section of the code appropriately. The output of running map.py should be two files now, one that ends in .lang for the language dictionary (same as before), and one that ends in .country for the country dictionary.
-```
-HINT: Most tweets contain a place key, which contains a dictionary with the country_code key. This is how you should lookup the country that a tweet was sent from. Some tweets, however, do not have a country_code key. This can happen, for example, if the tweet was sent from international waters or the international space station. Your code will have to be generic enough to handle edge cases similar to this without failing.
-```
+
+**HINT:** Most tweets contain a place key, which contains a dictionary with the country_code key. This is how you should lookup the country that a tweet was sent from. Some tweets, however, do not have a country_code key. This can happen, for example, if the tweet was sent from international waters or the international space station. Your code will have to be generic enough to handle edge cases similar to this without failing.
+
 **Task 2: Reduce**
 
 Once your map.py file has been modified to track results for each country, you should run the map file on all the tweets in the /data/Twitter\ dataset folder from 2020.
 
-HINT: Use the glob * to select only the tweets from 2020 and not all tweets.
+**HINT:** Use the glob * to select only the tweets from 2020 and not all tweets.
 
 You should create a shell script run_maps.sh that loops over each file in the dataset and runs map.py on that file. Each call to map.py can take up to a day to finish, so you should use the nohup command to ensure the program continues to run after you disconnect and the & operator to ensure that all map.py commands run in parallel.
 
