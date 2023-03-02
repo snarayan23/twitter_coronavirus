@@ -197,18 +197,23 @@ In this project, I used a dataset that had geotagged tweets in 2020 in order to 
 
  The bar graph shows that `#coronavirus` was used most in the US followed by India and Great Britain. We can also see that comparatively, Turkey and France had a much lower usage of `#coronavirus. 
 
-<img src=plots/reduced.lang.#coronavirus.png width=100% />
+
+![Language #coronavirus](https://github.com/snarayan23/twitter_coronavirus/blob/master/plots/reduced.lang.%23coronavirus.png)
 
  The bar graph shows that `#coronavirus` was tweeted most in English and Spanish. 
 
- <img src=plots/reduced.country.#코로나바이러스.png width=100% />
+
+ The following two graphs show the usage of the hashtag `#코로나바이러스` in the top 10 countries and languages it was used in. 
+
+![Country #코로나바이러스](https://github.com/snarayan23/twitter_coronavirus/blob/master/plots/reduced.country.%23%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4.png)
 
  The bar graph shows that `#코로나바이러스` was used most in Korea which makes sense since the hashtag is in Korean. 
 
- <img src=plots/reduced.lang.#코로나바이러스.png width=100% />
+![Language #코로나바이러스](https://github.com/snarayan23/twitter_coronavirus/blob/master/plots/reduced.lang.%23%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4.png)
 
  The bar graph shows that the hashtag `#코로나바이러스` was mostly used in Korean. 
 
+Similar analysis can be performed using the plots to determine the usage of other coronavirus related hashtags across countries and language.
 
 ## Submission
 
