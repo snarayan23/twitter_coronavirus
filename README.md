@@ -193,7 +193,7 @@ In this project, I used a dataset that had geotagged tweets in 2020 in order to 
 
  The following two graphs show the usage of `#coronavirus` in the top 10 countries and languages it was used in. 
 
- [Country #coronavirus] (https://github.com/snarayan23/twitter_coronavirus/blob/master/plots/reduced.country.%23coronavirus.png)
+![Country #coronavirus] (https://github.com/snarayan23/twitter_coronavirus/blob/master/plots/reduced.country.%23coronavirus.png)
 
  The bar graph shows that `#coronavirus` was used most in the US followed by India and Great Britain. We can also see that comparatively, Turkey and France had a much lower usage of `#coronavirus. 
 
