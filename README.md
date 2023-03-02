@@ -71,25 +71,7 @@ Merge sort over MapReduce is the classic example.
 Here, mapping is equivalent to sorting and so takes time O(n log n),
 and reducing is a call to the `_reduce` function that takes time O(n).
 But they are both rare in practice and require careful math to describe,
-so we will ignore them. '#코로나바이러스',  # korean
-    '#コロナウイルス',  # japanese
-    '#冠状病毒',        # chinese
-    '#covid2019',
-    '#covid-2019',
-    '#covid19',
-    '#covid-19',
-    '#coronavirus',
-    '#corona',
-    '#virus',
-    '#flu',
-    '#sick',
-    '#cough',
-    '#sneeze',
-    '#hospital',
-    '#nurse',
-    '#doctor',
-
-In the merge sort example, it requires p=n processors just to reduce the runtime down to O(n)...
+so we will ignore them. In the merge sort example, it requires p=n processors just to reduce the runtime down to O(n)...
 that's a lot of additional computing power for very little gain,
 and so is impractical.
 
